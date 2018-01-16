@@ -19,7 +19,10 @@
     "Object",
     "filter",
     "map",
-    "reduce"
+    "reduce",
+    "Object.filter",
+    "Object.map",
+    "Object.reduce"
   ],
   "author": "Daniel A.C. Martin <npm@daniel-martin.co.uk> (http://daniel-martin.co.uk/)",
   "license": "ISC",
