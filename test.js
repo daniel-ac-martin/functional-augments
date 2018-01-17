@@ -14,6 +14,7 @@ describe('index.js', () => {
       three: 3
     };
 
+    it('Is NOT enumerable', () => Object.prototype.propertyIsEnumerable('reduce').should.equal(false));
     it('Is a method', () => (typeof object.reduce).should.equal('function'));
     it('Takes two argument', () => object.reduce.should.have.lengthOf(2));
 
@@ -55,6 +56,7 @@ describe('index.js', () => {
       three: 3
     };
 
+    it('Is NOT enumerable', () => Object.prototype.propertyIsEnumerable('map').should.equal(false));
     it('Is a method', () => (typeof object.map).should.equal('function'));
     it('Takes one argument', () => object.map.should.have.lengthOf(1));
 
@@ -92,6 +94,7 @@ describe('index.js', () => {
       three: 3
     };
 
+    it('Is NOT enumerable', () => Object.prototype.propertyIsEnumerable('filter').should.equal(false));
     it('Is a method', () => (typeof object.filter).should.equal('function'));
     it('Takes one argument', () => object.filter.should.have.lengthOf(1));
 

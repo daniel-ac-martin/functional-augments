@@ -1,6 +1,6 @@
 {
   "name": "functional-augments-object",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Augment the Object prototype with methods for functional programming, including filter(), map() and reduce().",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,7 @@
     "url": "https://github.com/daniel-ac-martin/functional-augments-object/issues"
   },
   "homepage": "https://github.com/daniel-ac-martin/functional-augments-object#readme",
-  "engines" : {
+  "engines": {
     "node" : ">=4.0.0"
   },
   "devDependencies": {
