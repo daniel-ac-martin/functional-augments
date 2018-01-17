@@ -30,7 +30,7 @@
     "url": "https://github.com/daniel-ac-martin/functional-augments-object/issues"
   },
   "homepage": "https://github.com/daniel-ac-martin/functional-augments-object#readme",
-  "engines" : {
+  "engines": {
     "node" : ">=4.0.0"
   },
   "devDependencies": {
