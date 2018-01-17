@@ -1,6 +1,14 @@
 'use strict';
 
-Object.prototype.reduce = function reduce(f, init) {
+const augment = (o, p, m) =>
+      Object.defineProperty(o.prototype, p, {
+        configuable: true,
+        enumerable: false,
+        value: m,
+        writable: true
+      });
+
+augment(Object, 'reduce', function reduce(f, init) {
   if (f === undefined) {
     throw new ReferenceError('Missing argument, f');
   } else if (typeof f !== 'function') {
@@ -16,9 +24,9 @@ Object.prototype.reduce = function reduce(f, init) {
   }
 
   return keys.reduce(reducer, init);
-};
+});
 
-Object.prototype.map = function map(f) {
+augment(Object, 'map', function map(f) {
   if (f === undefined) {
     throw new ReferenceError('Missing argument, f');
   } else if (typeof f !== 'function') {
@@ -36,9 +44,9 @@ Object.prototype.map = function map(f) {
   };
 
   return this.reduce(reducer, {});
-};
+});
 
-Object.prototype.filter = function filter(f) {
+augment(Object, 'filter', function filter(f) {
   if (f === undefined) {
     throw new ReferenceError('Missing argument, f');
   } else if (typeof f !== 'function') {
@@ -46,4 +54,4 @@ Object.prototype.filter = function filter(f) {
   }
 
   return this.map((v, k) => f(v, k) ? v : undefined);
-};
+});
