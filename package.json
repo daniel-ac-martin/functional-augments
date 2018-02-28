@@ -1,37 +1,50 @@
 {
-  "name": "functional-augments-object",
-  "version": "0.1.1",
-  "description": "Augment the Object prototype with methods for functional programming, including filter(), map() and reduce().",
+  "name": "functional-augments",
+  "version": "1.0.0",
+  "description": "Augment collection prototypes with methods for functional programming, including filter(), map() and reduce().",
   "main": "index.js",
   "scripts": {
     "test": "npm run test:cover && npm run test:check-coverage",
-    "test:unit": "mocha --reporter spec test.js",
-    "test:cover": "istanbul cover _mocha -- --reporter spec test.js",
+    "test:unit": "mocha ./test/unit/",
+    "test:integration": "mocha ./test/integration/",
+    "test:cover": "istanbul cover _mocha -- ./test/integration/",
     "test:check-coverage": "istanbul check-coverage --statement 100 --branch 100 --function 100 --line 100"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daniel-ac-martin/functional-augments-object.git"
+    "url": "git+https://github.com/daniel-ac-martin/functional-augments.git"
   },
   "keywords": [
     "augment",
     "augmentation",
+    "Map",
     "Object",
+    "Set",
+    "String",
     "filter",
     "map",
     "reduce",
+    "Map.filter",
+    "Map.map",
+    "Map.reduce",
     "Object.filter",
     "Object.map",
-    "Object.reduce"
+    "Object.reduce",
+    "Set.filter",
+    "Set.map",
+    "Set.reduce",
+    "String.filter",
+    "String.map",
+    "String.reduce"
   ],
   "author": "Daniel A.C. Martin <npm@daniel-martin.co.uk> (http://daniel-martin.co.uk/)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/daniel-ac-martin/functional-augments-object/issues"
+    "url": "https://github.com/daniel-ac-martin/functional-augments/issues"
   },
-  "homepage": "https://github.com/daniel-ac-martin/functional-augments-object#readme",
+  "homepage": "https://github.com/daniel-ac-martin/functional-augments#readme",
   "engines": {
-    "node" : ">=4.0.0"
+    "node": ">=4.0.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",

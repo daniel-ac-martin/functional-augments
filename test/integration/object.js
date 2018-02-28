@@ -1,13 +1,9 @@
 'use strict';
 
-global.chai = require('chai');
-global.expect = chai.expect;
-global.should = chai.should();
+require('../../');
 
-require('.');
-
-describe('index.js', () => {
-  describe('Object.reduce()', () => {
+describe('Object', () => {
+  describe('.reduce()', () => {
     const object = {
       one: 1,
       two: 2,
@@ -49,7 +45,7 @@ describe('index.js', () => {
     });
   });
 
-  describe('Object.map()', () => {
+  describe('.map()', () => {
     const object = {
       one: 1,
       two: 2,
@@ -87,7 +83,7 @@ describe('index.js', () => {
     });
   });
 
-  describe('Object.filter()', () => {
+  describe('.filter()', () => {
     const object = {
       one: 1,
       two: 2,
